@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800;900&display=swap" rel="stylesheet">
+
+    <style>
+    /* O container que simula o dispositivo */
+        .mobile-shell {
+            width: 100%;
+            max-width: 480px; /* Largura padrão de um smartphone */
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+     </style>
 </head>
 <body>
 
@@ -32,10 +43,16 @@
         </nav>
     </header>
 
+
+    <!-- Esta div envolve todo o conteúdo do seu site -->
+    <div class="mobile-shell">
+
     <!-- Div / Container Central Dinâmico -->
     <main id="content">
         <!-- O conteúdo das páginas será injetado aqui via JavaScript -->
     </main>
+
+    </di>
 
     <!-- Rodapé (Fixo e Único) -->
     <footer>
