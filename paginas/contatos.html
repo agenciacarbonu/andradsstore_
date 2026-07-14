@@ -41,4 +41,96 @@
         .avatar-placeholder {
             width: 80px;
             height: 80px;
-            background: linear-gradient(13
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .titulo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 6px;
+        }
+
+        .subtitulo {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .links-grupo {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-link {
+            display: block;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #ffffff;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .btn-link:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            box-shadow: 0 4px 12px rgba(220, 39, 67, 0.2);
+        }
+
+        .btn-tiktok {
+            background-color: #010101;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-google {
+            background-color: #4285F4;
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.2);
+        }
+
+        .footer-creditos {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contatos-container">
+        
+        <div class="header-perfil">
+            <div class="avatar-placeholder"></div>
+            <h1 class="titulo">Nossos Contatos</h1>
+            <p class="subtitulo">Fale conosco ou acesse nossas redes</p>
+        </div>
+
+        <div class="links-grupo">
+            <a href="https://wa.me/5518999999999" target="_blank" class="btn-link btn-whatsapp">WhatsApp</a>
+            <a href="https://instagram.com" target="_blank" class="btn-link btn-instagram">Instagram</a>
+            <a href="https://tiktok.com" target="_blank" class="btn-link btn-tiktok">TikTok</a>
+            <a href="https://google.com" target="_blank" class="btn-link btn-google">Google</a>
+        </div>
+
+        <div class="footer-creditos">
+            © 2026 Todos os direitos reservados.
+        </div>
+
+    </div>
+
+</body>
+</html>
