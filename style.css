@@ -1,1 +1,270 @@
+/* --- Reset e Variáveis Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
 
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header / Menu Superior --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(13, 13, 13, 0.95);
+    border-bottom: 1px solid #1a1a1a;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #8c8c8c;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+    color: #8c8c8c;
+}
+
+.nav-menu a:hover, 
+.nav-menu a.active {
+    color: #ffffff;
+}
+
+/* Menu Hambúrguer (Escondido no Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* --- Banner Principal (Hero) --- */
+.hero {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(13,13,13,1)), url('https://picsum.photos/1920/1080?grayscale') no-repeat center center/cover;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.hero h2 {
+    font-size: 52px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #a6a6a6;
+    max-width: 550px;
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+
+.btn-cta {
+    background-color: #ffffff;
+    color: #0d0d0d;
+    padding: 16px 42px;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #a6a6a6;
+    transform: translateY(-2px);
+}
+
+/* --- Seção de Vitrine de Produtos --- */
+.products-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- Card de Produto Individual --- */
+.product-card {
+    background-color: #121212;
+    border: 1px solid #1a1a1a;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #333333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.product-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-color: #1a1a1a;
+}
+
+.product-info {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.product-category {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #8c8c8c;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.product-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-price {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: #050505;
+    border-top: 1px solid #1a1a1a;
+    padding: 50px 20px;
+    text-align: center;
+    color: #555555;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* --- Media Queries (Responsividade Mobile) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0d0d0d;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    .nav-menu.active {
+        height: 220px;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #121212;
+    }
+
+    /* Animação do botão sanduíche se tornando "X" */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+}
