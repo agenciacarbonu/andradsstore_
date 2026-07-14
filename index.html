@@ -3,28 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Cartão de Visita</title>
+    <title>Andrads Store | Streetwear Cristão</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f9; padding: 50px; }
-        .card { background: white; max-width: 350px; margin: auto; padding: 30px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #333; margin-bottom: 5px; }
-        p { color: #666; }
-        .links a { display: block; background: #007bff; color: white; margin: 10px 0; padding: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-        .links a:hover { background: #0056b3; }
+        /* Estilos Globais e Paleta de Cores */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', Arial, sans-serif; }
+        body { background-color: #0d0d0d; color: #ffffff; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Menu Superior */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background-color: rgba(13, 13, 13, 0.95);
+            border-bottom: 1px solid #222; z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; padding: 20px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-size: 24px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
+        .logo span { color: #8c8c8c; }
+        .nav-menu { display: flex; list-style: none; gap: 30px; }
+        .nav-menu a {
+            font-size: 14px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1px; transition: color 0.3s; color: #a6a6a6;
+        }
+        .nav-menu a:hover, .nav-menu a.active { color: #ffffff; }
+
+        /* Banner Principal (Hero) */
+        .hero {
+            height: 80vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(13,13,13,1)), url('https://picsum.photos/1920/1080') no-repeat center center/cover;
+            padding: 20px; margin-top: 70px;
+        }
+        .hero h2 { font-size: 48px; font-weight: 900; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; }
+        .hero p { font-size: 18px; color: #cccccc; max-width: 600px; margin-bottom: 30px; font-weight: 300; }
+        .btn-cta {
+            background-color: #ffffff; color: #0d0d0d; padding: 15px 40px;
+            font-size: 14px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 2px; border-radius: 0; transition: all 0.3s ease;
+        }
+        .btn-cta:hover { background-color: #cccccc; transform: translateY(-3px); }
+
+        /* Grid de Produtos */
+        .products-section { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
+        .section-title { font-size: 28px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; text-align: center; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        
+        /* Card de Produto */
+        .product-card { background-color: #121212; border: 1px solid #1a1a1a; transition: transform 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); border-color: #333; }
+        .product-img { width: 100%; height: 350px; object-fit: cover; background-color: #222; }
+        .product-info { padding: 20px; text-align: center; }
+        .product-category { font-size: 11px; text-transform: uppercase; color: #8c8c8c; letter-spacing: 1px; margin-bottom: 8px; }
+        .product-title { font-size: 16px; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+        .product-price { font-size: 15px; color: #fff; font-weight: 600; }
+
+        /* Rodapé */
+        footer { background-color: #050505; border-top: 1px solid #111; padding: 40px 20px; text-align: center; color: #555; font-size: 12px; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Seu Nome</h1>
-        <p>Sua Profissão / Especialidade</p>
-        <hr>
-        <div class="links">
-            <a href="mailto:seu-email@email.com" target="_blank">E-mail</a>
-            <a href="https://linkedin.com/in/seu-perfil" target="_blank">LinkedIn</a>
-            <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
+    <!-- Menu Superior -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">ANDRADS<span>_</span></div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="camisas.html">Camisas</a></li>
+                <li><a href="outros.html">Coleções</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <h2>Fé e Identidade</h2>
+        <p>Estampas autorais com propósito, conceito e a qualidade que as ruas exigem.</p>
+        <a href="camisas.html" class="btn-cta">Ver Camisas</a>
+    </section>
+
+    <!-- Seção de Destaques -->
+    <section class="products-section">
+        <h3 class="section-title">Lançamentos</h3>
+        <div class="product-grid">
+            
+            <!-- Exemplo Camisa -->
+            <div class="product-card">
+                <img src="https://picsum.photos/400/500?random=1" alt="Camiseta Streetwear" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Camisetas</span>
+                    <h4 class="product-title">T-Shirt "Grace Alone" Oversized</h4>
+                    <span class="product-price">R$ 119,90</span>
+                </div>
+            </div>
+
+            <!-- Exemplo Moletom -->
+            <div class="product-card">
+                <img src="https://picsum.photos/400/500?random=2" alt="Moletom Streetwear" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Moletons</span>
+                    <h4 class="product-title">Hoodie "Faith Over Fear" Preto</h4>
+                    <span class="product-price">R$ 229,90</span>
+                </div>
+            </div>
+
+            <!-- Exemplo Shorts -->
+            <div class="product-card">
+                <img src="https://picsum.photos/400/500?random=3" alt="Shorts Streetwear" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Shorts</span>
+                    <h4 class="product-title">Shorts Tactel Minimalist</h4>
+                    <span class="product-price">R$ 89,90</span>
+                </div>
+            </div>
+
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ANDRADS_ STORE. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
