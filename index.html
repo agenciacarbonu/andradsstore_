@@ -3,61 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.json">
+    
     <title>Andrads Store | Streetwear Cristão</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800;900&display=swap" rel="stylesheet">
 
+    <script src="./app.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('Service Worker registrado!', reg))
+            .catch(err => console.log('Falha ao registrar Service Worker', err));
+        });
+        }
+    </script>  
+
     <style>
-    /* O container que simula o dispositivo */
+        /* Centraliza o "celular" no meio da tela do computador */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* Cor de fundo externa para destacar o celular */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* O container principal que simula o dispositivo móvel */
         .mobile-shell {
             width: 100%;
-            max-width: 480px; /* Largura padrão de um smartphone */
+            max-width: 480px; /* Largura padrão de smartphone */
             background: #ffffff;
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column; /* Organiza cabeçalho, conteúdo e rodapé em linha vertical */
             position: relative;
-     </style>
+        }
+
+        /* Garante que o conteúdo principal empurre o rodapé para o final da tela */
+        #content {
+            flex: 1;
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: black; margin: 0; max-width: 1080px;">
 
-    <!-- Menu Superior (Fixo e Único) -->
-    <header>
-        <nav class="nav-container">
-            <div class="logo">ANDRADS STORE<span>_</span></div>
-            
-            <button class="menu-toggle" aria-label="Abrir Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <!-- Links com data-page para controle do JS -->
-            <ul class="nav-menu">
-                <li><a href="#" data-page="inicio" class="nav-link active">Home</a></li>
-                <li><a href="#" data-page="produtos" class="nav-link">Produtos</a></li>
-                <li><a href="#" data-page="contatos" class="nav-link">Contato</a></li>
-                <li><a href="#" data-page="sobre" class="nav-link">Sobre Nós</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <!-- Esta div envolve todo o conteúdo do seu site -->
+    <!-- Container Central Único (Simulador Mobile) -->
     <div class="mobile-shell">
 
-    <!-- Div / Container Central Dinâmico -->
-    <main id="content">
-        <!-- O conteúdo das páginas será injetado aqui via JavaScript -->
-    </main>
+        <!-- 1. Div / Cabeçalho -->
+        <header>
+            <nav class="nav-container">
+                <div class="logo">ANDRADS STORE<span>_</span></div>
+                
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
 
-    </di>
+                <!-- Links com data-page para controle do JS -->
+                <ul class="nav-menu">
+                    <li><a href="#" data-page="inicio" class="nav-link active">Home</a></li>
+                    <li><a href="#" data-page="produtos" class="nav-link">Produtos</a></li>
+                    <li><a href="#" data-page="contatos" class="nav-link">Contato</a></li>
+                    <li><a href="#" data-page="sobre" class="nav-link">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Rodapé (Fixo e Único) -->
-    <footer>
-        <p>&copy; 2026 ANDRADS STORE & AGENCIA CARBONU. Todos os direitos reservados.</p>
-    </footer>
+        <!-- 2. Div / Conteúdo Central Dinâmico -->
+        <main id="content" style="background-color: black;">
+            <!-- O conteúdo das páginas será injetado aqui via JavaScript -->
+        </main>
+
+        <!-- 3. Div / Rodapé -->
+        <footer>
+            <p>&copy; 2026 ANDRADS STORE & AGENCIA CARBONU. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
 
     <script src="script.js"></script>
 </body>
