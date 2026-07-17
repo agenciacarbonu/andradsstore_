@@ -54,14 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const page = link.getAttribute('data-page');
             loadPage(page);
 
-            // Fecha o menu mobile se estiver aberto após clicar
-            if (navMenu.classList.contains('active')) {
+            if (navMenu && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
             }
+            if (menuToggle && menuToggle.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+}
         });
     });
 
     // --- 4. Carrega a página inicial por padrão ao abrir o site ---
-    loadPage('inicio');
+    loadPage('contatos');
 });

@@ -6,8 +6,8 @@ const ASSETS = [
   './app.js',
   './paginas/inicio.html',
   './paginas/produtos.html',
-  './paginas/contato.html',
-  './paginas/sobre.html'
+  './paginas/contatos.html',
+  './paginas/sobre.html',
 ];
 
 // Instala o service worker e guarda os arquivos no cache do celular
