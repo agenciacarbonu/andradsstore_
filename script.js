@@ -64,5 +64,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- 4. Carrega a página inicial por padrão ao abrir o site ---
-    loadPage('contatos');
+    loadPage('inicio');
 });

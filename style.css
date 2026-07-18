@@ -1,3 +1,7 @@
+i {
+  display: inline-block; /* Garante que ele apareça */
+}
+
 /* --- Reset e Variáveis Globais --- */
 * {
     margin: 0;
@@ -293,45 +297,7 @@ body {
     min-height: 100vh;
 }
 
-/* Container único solicitado */
-.contatos-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 20px;
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    padding: 35px 25px;
-    text-align: center;
-    border: 1px solid #eef2f5;
-}
-
-.header-perfil {
-    margin-bottom: 25px;
-}
-
-.avatar-placeholder {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #4f46e5, #06b6d4);
-    border-radius: 50%;
-    margin: 0 auto 15px auto;
-    border: 3px solid #ffffff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.titulo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 6px;
-}
-
-.subtitulo {
-    font-size: 14px;
-    color: #64748b;
-}
-
+/* CONTATOS*/
 .links-grupo {
     display: flex;
     flex-direction: column;
@@ -339,9 +305,9 @@ body {
 }
 
 .btn-link {
-    display: block;
-    text-decoration: none;
+    display: inline;
     padding: 14px;
+    margin: 5px 0;
     border-radius: 10px;
     font-size: 15px;
     font-weight: 600;
@@ -364,6 +330,12 @@ body {
     box-shadow: 0 4px 12px rgba(220, 39, 67, 0.2);
 }
 
+.btn-rota {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .btn-tiktok {
     background-color: #010101;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -372,10 +344,4 @@ body {
 .btn-google {
     background-color: #4285F4;
     box-shadow: 0 4px 12px rgba(66, 133, 244, 0.2);
-}
-
-.footer-creditos {
-    margin-top: 25px;
-    font-size: 12px;
-    color: #94a3b8;
 }
