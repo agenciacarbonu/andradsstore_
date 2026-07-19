@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadPage(pageName) {
         try {
             // Busca o arquivo HTML parcial dentro da pasta 'paginas'
-            const response = await fetch(`paginas/${pageName}.html`);
+            const response = await fetch(`/paginas/${pageName}.html`);
             
             if (!response.ok) {
                 throw new Error('Página não encontrada');
